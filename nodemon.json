@@ -1,0 +1,5 @@
+{
+    "exec": "npx tailwindcss -i ./src/styles.css -o ./public/styles.css --watch",
+    "watch": ["./src/styles.css"],
+    "ext": "css"
+  }
