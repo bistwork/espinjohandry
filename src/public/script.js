@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const typewriter = document.getElementById("typewriter");
     const texts = [
         "a Hacker",
-        "an Intelligence Analyst",
+        "a Security Engineer",
         "a Bug Bounty Hunter"
     ];
     let textIndex = 0;

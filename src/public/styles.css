@@ -2,15 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-body, html {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: "Outfit", Helvetica, Arial, sans-serif;
-    background-color: transparent;
-    color: white;
+    box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    background-color: #212428; /* Fondo para todo el sitio */
+    color: #878e99; /* Color de texto global */
+    font-family: "Outfit", Helvetica, Arial, sans-serif;
+}
+
+/* Aseguramos que cualquier contenedor principal también tenga el mismo fondo */
+.slider,
+.new-section,
+.side-menu,
+.content-container,
+.text-block,
+.menu-content {
+    background-color: #212428; /* Fondo para las secciones específicas */
+}
+
+/* Slider - Se mantiene transparente para permitir la imagen de fondo */
 .slider {
     width: 100%;
     height: 100vh;
@@ -18,9 +35,6 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('images/bg-dark-2.jpg');
-    background-size: cover;
-    background-position: center;
     overflow: hidden;
 }
 
@@ -98,7 +112,7 @@ body, html {
 .description {
     font-family: "Raleway", Helvetica, Arial, sans-serif;
     font-size: clamp(14px, 2vw, 18px);
-    color: #BBBBBB;
+    color: #878e99; /* Color global para los textos */
     text-align: left;
     max-width: 600px;
     margin-top: 10px;
@@ -118,32 +132,17 @@ body, html {
     }
 }
 
-.contact-info {
-    position: absolute;
-    top: 50%;
-    right: clamp(20px, 5%, 10%);
-    transform: translateY(-50%);
-    text-align: left;
-    color: white;
-    padding: 0 20px;
-    z-index: 2;
+/* Aseguramos que todos los encabezados reciban el color global */
+h1, h2, h3, h4, h5, h6, .new-section-title, .new-section-title2, .text-title {
+    color: #878e99; /* Color de texto global */
 }
 
 .text-title {
     font-family: "Outfit", Helvetica, Arial, sans-serif;
     font-weight: 600;
     font-size: 17px;
-    color: white;
+    color: #878e99; /* Aseguramos el color global para los títulos */
     text-transform: capitalize;
-}
-
-.text-content {
-    color: #BBBBBB;
-    font-family: "Outfit", Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
-    font-weight: normal;
-    margin-top: 10px;
 }
 
 .social-icons {
@@ -154,17 +153,13 @@ body, html {
 
 .social-icons a {
     text-decoration: none;
-    color: white;
+    color: #878e99; /* Color de texto global en los iconos */
     font-size: 24px;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
     color: #ccc;
-}
-
-.spacer-single {
-    margin: 15px 0;
 }
 
 .hamburger-menu {
@@ -226,7 +221,7 @@ body, html {
 
 .menu-text {
     font-size: clamp(24px, 4vw, 30px);
-    color: white;
+    color: #878e99; /* Color de texto global */
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -236,32 +231,30 @@ body, html {
 }
 
 .new-section {
-    background-color: #151c22;
+    background-color: #212428; /* Fondo para la sección */
     padding: 4rem 0;
 }
 
 .new-section-title {
     font-size: clamp(24px, 3vw, 34px);
     line-height: 1.2;
-    color: white;
+    color: #878e99; /* Aseguramos que el color sea global */
     font-weight: bold;
     text-align: center;
     margin-bottom: 1rem;
     margin-left: -480px;
-  
-
 }
+
 .new-section-title2 {
     font-size: clamp(24px, 3vw, 34px);
-    color: white;
+    color: #878e99; /* Aseguramos que el color sea global */
     font-weight: bold;
     text-align: center;
     margin-bottom: 8ch;
     margin-left: -94px;
     line-height: 0.2;
+}
 
-
-}    
 .profile-image {
     width: clamp(250px, 30vw, 400px);
     height: clamp(250px, 30vw, 400px);
@@ -281,7 +274,7 @@ body, html {
 .text-container {
     max-width: 1000px;
     text-align: left;
-    color: #bbbbbb;
+    color: #878e99; /* Color de texto global */
     font-size: clamp(14px, 2vw, 18px);
     line-height: 1.6;
 }
@@ -289,14 +282,6 @@ body, html {
 @media screen and (max-width: 1024px) {
     .content-container {
         padding: 0 40px;
-    }
-    
-    .contact-info {
-        position: relative;
-        top: auto;
-        right: auto;
-        transform: none;
-        margin-top: 40px;
     }
 }
 
