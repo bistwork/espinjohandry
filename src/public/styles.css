@@ -12,7 +12,7 @@
 
 html, body {
     height: 100%;
-    background-color: #212428; /* Fondo para todo el sitio */
+    background-color: #212428; /* Fondo global */
     color: #878e99; /* Color de texto global */
     font-family: "Outfit", Helvetica, Arial, sans-serif;
 }
@@ -24,7 +24,7 @@ html, body {
 .content-container,
 .text-block,
 .menu-content {
-    background-color: #212428; /* Fondo para las secciones específicas */
+    background-color: transparent; /* El fondo es transparente para las secciones específicas */
 }
 
 /* Slider - Se mantiene transparente para permitir la imagen de fondo */
@@ -36,8 +36,14 @@ html, body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-image: url(images/back.jpg); /* Asegúrate de que esta ruta sea correcta */
+
+
+  
+
 }
 
+/* Header (Menú hamburguesa) */
 .header {
     position: absolute;
     top: 20px;
@@ -46,6 +52,7 @@ html, body {
     z-index: 10;
 }
 
+/* Contenedor de contenido */
 .content-container {
     width: 100%;
     max-width: 1200px;
@@ -55,8 +62,10 @@ html, body {
     align-items: flex-start;
     position: relative;
     z-index: 2;
+    color: white; /* Asegura que el texto en esta sección sea blanco */
 }
 
+/* Bloque de texto principal */
 .text-block {
     display: flex;
     flex-direction: column;
@@ -65,8 +74,9 @@ html, body {
     width: 100%;
 }
 
+/* Texto de bienvenida */
 .welcome-text {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo sutil para que el texto sea visible */
     color: white;
     font-size: 10px;
     text-transform: uppercase;
@@ -76,6 +86,7 @@ html, body {
     letter-spacing: 4px;
 }
 
+/* Texto dinámico */
 .text-wrapper {
     display: flex;
     align-items: center;
@@ -99,6 +110,7 @@ html, body {
     word-wrap: break-word;
 }
 
+/* Cursor animado */
 .cursor {
     font-weight: bold;
     animation: blink 1s infinite;
@@ -109,18 +121,20 @@ html, body {
     50% { opacity: 0; }
 }
 
+/* Descripción */
 .description {
     font-family: "Raleway", Helvetica, Arial, sans-serif;
     font-size: clamp(14px, 2vw, 18px);
-    color: #878e99; /* Color global para los textos */
+    color: #878e99; /* Color de texto global */
     text-align: left;
     max-width: 600px;
-    margin-top: 10px;
+    margin-top: -17px;
     animation: fadeInUp 0.6s ease-in-out 0.3s;
     opacity: 0;
     animation-fill-mode: forwards;
 }
 
+/* Animación de fadeIn */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -132,23 +146,24 @@ html, body {
     }
 }
 
-/* Aseguramos que todos los encabezados reciban el color global */
+/* Encabezados */
 h1, h2, h3, h4, h5, h6, .new-section-title, .new-section-title2, .text-title {
     color: #878e99; /* Color de texto global */
 }
 
+/* Títulos */
 .text-title {
     font-family: "Outfit", Helvetica, Arial, sans-serif;
     font-weight: 600;
     font-size: 17px;
-    color: #878e99; /* Aseguramos el color global para los títulos */
+    color: #ffff; /* Asegura que los títulos tengan color blanco */
     text-transform: capitalize;
 }
 
+/* Íconos sociales */
 .social-icons {
     display: flex;
     gap: 15px;
-    margin-top: 20px;
 }
 
 .social-icons a {
@@ -162,6 +177,7 @@ h1, h2, h3, h4, h5, h6, .new-section-title, .new-section-title2, .text-title {
     color: #ccc;
 }
 
+/* Menú hamburguesa */
 .hamburger-menu {
     display: flex;
     flex-direction: column;
@@ -197,6 +213,7 @@ h1, h2, h3, h4, h5, h6, .new-section-title, .new-section-title2, .text-title {
     transform: translateY(-9px) rotate(-45deg);
 }
 
+/* Menú lateral */
 .side-menu {
     position: fixed;
     top: 0;
@@ -230,28 +247,27 @@ h1, h2, h3, h4, h5, h6, .new-section-title, .new-section-title2, .text-title {
     color: #ccc;
 }
 
+/* Nueva sección */
 .new-section {
-    background-color: #212428; /* Fondo para la sección */
+    background-color: #0A0E11;
     padding: 4rem 0;
 }
 
 .new-section-title {
     font-size: clamp(24px, 3vw, 34px);
     line-height: 1.2;
-    color: #878e99; /* Aseguramos que el color sea global */
+    color: #ffffff;
     font-weight: bold;
     text-align: center;
     margin-bottom: 1rem;
-    margin-left: -480px;
+    margin-left: -701px;
 }
 
 .new-section-title2 {
     font-size: clamp(24px, 3vw, 34px);
-    color: #878e99; /* Aseguramos que el color sea global */
-    font-weight: bold;
+    color: #ffff;
     text-align: center;
-    margin-bottom: 8ch;
-    margin-left: -94px;
+    margin-left: -333px;
     line-height: 0.2;
 }
 
@@ -260,9 +276,16 @@ h1, h2, h3, h4, h5, h6, .new-section-title, .new-section-title2, .text-title {
     height: clamp(250px, 30vw, 400px);
     object-fit: cover;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    margin-top: 12px;
+    margin-top: 7px;
+    margin-left: -112px;
+    border-radius: 6%;
 }
 
+.image-container {
+    width: 200px;
+}
+
+/* Flexbox para la nueva sección */
 .flex-container {
     display: flex;
     justify-content: center;
@@ -279,6 +302,7 @@ h1, h2, h3, h4, h5, h6, .new-section-title, .new-section-title2, .text-title {
     line-height: 1.6;
 }
 
+/* Media Queries */
 @media screen and (max-width: 1024px) {
     .content-container {
         padding: 0 40px;

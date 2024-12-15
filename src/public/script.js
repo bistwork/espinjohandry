@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Efecto de máquina de escribir
     const typewriter = document.getElementById("typewriter");
     const texts = [
+        "Johandry Espin",
         "a Hacker",
-        "a Security Engineer",
         "a Bug Bounty Hunter"
     ];
     let textIndex = 0;
